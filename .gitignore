@@ -1,0 +1,10 @@
+*~
+.DS_Store
+.vagrant/
+.idea/
+*.ipr
+*.iml
+*.iws
+out/
+.idea_modules/
+.sass-cache/
