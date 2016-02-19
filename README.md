@@ -150,6 +150,14 @@ Separate categories title from the json calls file is just in order to be able t
     * Comment : comment about the status of the call, ok, something to change, ...
 
 
+#Screenshots
+
+![Home](https://raw.githubusercontent.com/mate2/Vodka/master/_screens/01-home.gif)
+![GET](https://raw.githubusercontent.com/mate2/Vodka/master/_screens/02-get.gif)
+![POST & PUT](https://raw.githubusercontent.com/mate2/Vodka/master/_screens/03-post-put.gif)
+![DELETE](https://raw.githubusercontent.com/mate2/Vodka/master/_screens/04-delete.gif)
+
+
 #Tools Used
 * Angular
 * Bootstrap
