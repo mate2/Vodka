@@ -6,12 +6,12 @@ Vodka help you generate your REST API documentation easily just by typing a simp
 
 * Easy to build your documentation by typing one simple JSON files !
 * Easy to maintain !
-* Any member of your team can edit json file to have an eye on state of alle your API calls !
+* Any member of your team can edit json file to have an eye on state of all your API calls !
 
 
 #Installation instructions
 
-Vodka is just a simple single page angular web app with no databse or backend needed. You can use it locally or have it on a simple http server.
+Vodka is a simple angular single page web app with no database or backend needed. You can use it locally or have it on a simple http server.
 
 
 #Configurations instructions
@@ -26,7 +26,7 @@ Vodka is just a simple single page angular web app with no databse or backend ne
 ]
 ```
 
-Separate categories title from complete json file is just in order to be able to work on the json, add some incomplete categories without displaying it in the documentation until they are ready.
+Separate categories title from the json calls file is just in order to be able to work on the json, add some incomplete categories without displaying it in the documentation until they are ready.
 
 
 * Then you just have to complete your json (./json/calls.json) with all your calls by categories like this : 
@@ -141,8 +141,8 @@ Separate categories title from complete json file is just in order to be able to
     * Title : to be displayed in the panel title of the call documentation
     * Description : small explanation of what the call is suppposed to do
     * Method : http request method (caps)
-    * Url : root of your api url (ex : http:www.myapi.com)
-    * Address : all the path after the roout url of your api for your call, without params (ex : /category/ )
+    * Url : root of your api url (ex : http://www.myapi.com)
+    * Address : all the path after the root url of your api for your call, without params (ex : /category/ )
     * Params : array or object of arrays (with a title) of calls
     * Return : explain what is returned by the call
     * Example : example of a functionnal url of the call. Just type same address than in address field with the params. Root url will be added automatically
