@@ -1,0 +1,184 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<title>Virtual Organized Documentation for Kickass Apis</title>
+		<meta name="author" content="mate2" />
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/monokai.min.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+
+		<link href="css/vodka.css" rel="stylesheet" type="text/css" />
+		<script src="js/vodkaCtrl.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+	</head>
+	<body ng-app="vodkaApp">
+		<div id="global" ng-controller="vodkaCtrl">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<a class="navbar-brand" ng-click="changeView('index')">V.O.D.K.A.</a>
+				</div>
+			</nav>
+			<div class="container">
+				<h1 class="sub-title">Virtual Organized Documentation for Kickass Apis</h1>
+			</div>
+			<div class="container-view container">
+				<div class="menu col-xs-1 col-md-2">
+					<ul>
+						<li ng-repeat="category in categories" ng-click="changeView(category)" ng-class="{selected: category === categorySelected}">{{category}}</li>
+					</ul>
+				</div>
+				<div class="view col-xs-11 col-md-10">
+					<div ng-show="categorySelected && callSelected.calls">
+						 <h2>{{callSelected.title}} :</h2>
+						<call-container ng-repeat="call in callSelected.calls" call="call"></call-container>
+					</div>
+					<div ng-show="categorySelected && !callSelected.calls">
+						no calls for
+					</div>
+					<div ng-show="!categorySelected">
+						<h2>Welcome to V.O.D.K.A. !</h2><br /><br />
+						<p>Vodka help you generate your API documentation easily just by typing a simple (or two) json files !</p>
+						<hr />
+						<p>First, you need to write a json file for your categories of your REST calls like this : </p>
+						<pre><code class="json">
+[
+	"category1",
+	"category2",
+	"category3"
+]
+						</code></pre>
+						<p>Separate categories title from the json calls file is just in order to be able to work on the json, add some incomplete categories without displaying it in the documentation until they are ready.</p>
+
+						<p>Then you just have to complete your json with all your calls by categories like this : </p>
+						<pre><code class="json">
+{
+	"category1" : {
+		"title" : "Category 1",
+		"calls" : [
+			{
+				"title" : "Get all call 1",
+				"description" : "description call 1",
+				"method" : "GET",
+				"url" : "{{url}}",
+				"address" : "/category1/",
+				"params" : [
+					"token"
+				],
+				"return" : "return list of category1",
+				"example" : "/category1/?token=123",
+				"status" : "green",
+				"comment" : "online"
+			},
+			{
+				"title" : "Get call 1-2 X",
+				"description" : "description call 1-2",
+				"method" : "GET",
+				"url" : "{{url}}",
+				"address" : "/category1/[X]/",
+				"params" : [
+					"[X] = id",
+					"token"
+				],
+				"return" : "return object X of category1",
+				"example" : "/category1/42/?token=123",
+				"status" : "green",
+				"comment" : "online"
+			}
+		]
+	},
+	"category2" :{
+		"title" : "Category 2",
+		"calls" : [
+			{
+				"title" : "call 2",
+				"description" : "description call 2",
+				"method" : "POST",
+				"url" : "{{url}}",
+				"address" : "/category2/",
+				"params" : [
+					{
+						"title of params 1" : [
+							"param1",
+							"param2"
+						]
+					},
+					{
+						"title of params 2" : [
+							"param 3",
+							"param 4"
+						]
+					}
+				],
+				"return" : "return post object",
+				"example" : "/category2/?param1=param1&param2=param2",
+				"status" : "orange",
+				"comment" : "doesn't return good objet, please fix it"
+			},
+			{
+				"title" : "call 2-2",
+				"description" : "description call 2-2",
+				"method" : "PUT",
+				"url" : "{{url}}",
+				"address" : "/category2/[X]",
+				"params" : [
+					"[X] = id",
+					"token",
+					"param1"
+				],
+				"return" : "return put object",
+				"example" : "/category2/42/?param1=param1-modified",
+				"status" : "green",
+				"comment" : "online"
+			}
+		]
+	},
+	"category3" : {
+		"title" : "Category 3",
+		"calls" : [
+			{
+				"title" : "delete call 3",
+				"description" : "description call 3",
+				"method" : "DELETE",
+				"url" : "{{url}}",
+				"address" : "/category3/[X]",
+				"params" : [
+					"[X] = id",
+					"token"
+				],
+				"return" : "return success or fail message",
+				"example" : "/category3/42?token=123",
+				"status" : "red",
+				"comment" : "to do"
+			}
+		]
+	}
+}
+						</code></pre>
+
+						<p>Here is the list of params used to be displayed : </p>
+						<ul>
+							<li>Key : same as the category name (REST category)</li>
+							<li>Title : to be displayed in the panel title of the call documentation</li>
+							<li>Description : small explanation of what the call is suppposed to do</li>
+							<li>Method : http request method (caps)</li>
+							<li>Url : root of your api url (ex : http://api.mysite.com)</li>
+							<li>Address : all the path after the root url of your api for your call, without params (ex : /category/ )</li>
+							<li>Params : array or object of arrays (with a title) of calls</li>
+							<li>Return : explain what is returned by the call</li>
+							<li>Example : example of a functionnal url of the call. Just type same address than in address field with the params. Root url will be added automatically</li>
+							<li>Status : green, orange or red to display a status icon of the link</li>
+							<li>Comment : comment about the status of the call, ok, something to change, ...</li>
+						</ul>
+						<hr />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>		

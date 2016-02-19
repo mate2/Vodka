@@ -141,7 +141,7 @@ Separate categories title from the json calls file is just in order to be able t
     * Title : to be displayed in the panel title of the call documentation
     * Description : small explanation of what the call is suppposed to do
     * Method : http request method (caps)
-    * Url : root of your api url (ex : http://www.myapi.com)
+    * Url : root of your api url (ex : http://api.mysite.com)
     * Address : all the path after the root url of your api for your call, without params (ex : /category/ )
     * Params : array or object of arrays (with a title) of calls
     * Return : explain what is returned by the call
@@ -149,6 +149,12 @@ Separate categories title from the json calls file is just in order to be able t
     * Status : green, orange or red to display a status icon of the link
     * Comment : comment about the status of the call, ok, something to change, ...
 
+
+#Tools Used
+* Angular
+* Bootstrap
+* Sass 
+* Compass (to rebuild automatically css while working on it : type command line "compass watch" in root folder)
 
 
 #Interested ? Ideas to improve / Todo List

@@ -1,0 +1,204 @@
+body {
+  font-family: 'Inconsolata', 'Verdana', 'sans-serif';
+}
+
+nav.navbar {
+  background-color: #97BDE4;
+}
+
+nav.navbar-default a.navbar-brand {
+  font-weight: bold;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+}
+nav.navbar-default a.navbar-brand:hover {
+  color: white;
+}
+
+h1.sub-title {
+  margin-top: -12px;
+  font-size: 20px;
+  padding-left: 5px;
+  font-style: italic;
+}
+
+div.container-view {
+  margin-top: 40px;
+}
+div.container-view div.menu {
+  border: solid 1px #97BDE4;
+  background-color: #eee;
+  padding: 15px 0 15px 0;
+  border-radius: 15px 0px 0px 15px;
+}
+div.container-view div.menu ul {
+  margin: 0;
+  padding: 0;
+}
+div.container-view div.menu ul li {
+  list-style: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-left: 15px;
+  font-size: 16px;
+}
+div.container-view div.menu ul li:hover, div.container-view div.menu ul li.selected {
+  background-color: white;
+}
+div.container-view div.menu ul li.selected {
+  font-weight: bold;
+  color: white;
+  background-color: #97BDE4;
+}
+div.container-view div.view {
+  padding-left: 40px;
+}
+div.container-view div.view h2 {
+  margin-top: 0;
+}
+div.container-view div.view .call-container {
+  margin: 40px 0 60px 0;
+}
+div.container-view div.view .call-container hr {
+  border-top: #ccc solid 1px;
+}
+div.container-view div.view .call-container .panel-default .panel-heading h3.panel-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px #aaa;
+}
+div.container-view div.view .call-container .panel-default span.panel-body-title {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
+div.container-view div.view .call-container .panel-default span.panel-body-content {
+  padding-left: 5px;
+}
+div.container-view div.view .call-container .panel-default span.panel-body-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+div.container-view div.view .call-container .panel-default span.status-green {
+  background-color: green;
+}
+div.container-view div.view .call-container .panel-default span.status-orange {
+  background-color: orange;
+}
+div.container-view div.view .call-container .panel-default span.status-red {
+  background-color: red;
+}
+div.container-view div.view .call-container table tr td, div.container-view div.view .call-container table tr th {
+  vertical-align: middle;
+  border: solid 1px #ccc;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+div.container-view div.view .call-container table tr th {
+  background-color: #f5f5f5;
+}
+div.container-view div.view .call-container table tr .td-method {
+  min-width: 75px;
+  text-align: center;
+}
+div.container-view div.view .call-container table tr .td-method .label-method {
+  width: 65px;
+  height: 18px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  line-height: 18px;
+  color: white;
+  margin: auto;
+}
+div.container-view div.view .call-container table tr .td-method .label-get {
+  background-color: #8DCEA8;
+}
+div.container-view div.view .call-container table tr .td-method .label-post {
+  background-color: #FCB34B;
+}
+div.container-view div.view .call-container table tr .td-method .label-put {
+  background-color: #97BDE4;
+}
+div.container-view div.view .call-container table tr .td-method .label-delete {
+  background-color: #F37C7C;
+}
+div.container-view div.view .call-container table tr .td-url {
+  text-align: center;
+  min-width: 75px;
+}
+div.container-view div.view .call-container table tr .td-address {
+  max-width: 15%;
+}
+div.container-view div.view .call-container table tr .td-params {
+  max-width: 25%;
+}
+div.container-view div.view .call-container table tr .td-params ul {
+  margin: 0;
+  padding: 0 5px;
+}
+div.container-view div.view .call-container table tr .td-params ul li {
+  list-style: none;
+}
+div.container-view div.view .call-container table tr .td-params ul li.list-sub-title {
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+div.container-view div.view .call-container table tr .td-params ul li.list-sub-title ul.sub-list {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+div.container-view div.view .call-container table tr .td-params ul li.list-sub-title ul.sub-list li {
+  font-weight: normal;
+  text-transform: none;
+}
+div.container-view div.view .call-container table tr .td-return, div.container-view div.view .call-container table tr .td-example {
+  width: 25%;
+}
+div.container-view div.view .call-container-get .panel-default, div.container-view div.view .call-container-get .panel-default .panel-heading, div.container-view div.view .call-container-get table tr td, div.container-view div.view .call-container-get table tr th {
+  border-color: #8DCEA8;
+}
+div.container-view div.view .call-container-get .panel-default .panel-heading {
+  background-color: #8DCEA8;
+}
+div.container-view div.view .call-container-get table tr th {
+  background-color: rgba(141, 206, 168, 0.3);
+}
+div.container-view div.view .call-container-post .panel-default, div.container-view div.view .call-container-post .panel-default .panel-heading, div.container-view div.view .call-container-post table tr td, div.container-view div.view .call-container-post table tr th {
+  border-color: #FCB34B;
+}
+div.container-view div.view .call-container-post .panel-default .panel-heading {
+  background-color: #FCB34B;
+}
+div.container-view div.view .call-container-post table tr th {
+  background-color: rgba(252, 179, 75, 0.3);
+}
+div.container-view div.view .call-container-put .panel-default, div.container-view div.view .call-container-put .panel-default .panel-heading, div.container-view div.view .call-container-put table tr td, div.container-view div.view .call-container-put table tr th {
+  border-color: #97BDE4;
+}
+div.container-view div.view .call-container-put .panel-default .panel-heading {
+  background-color: #97BDE4;
+}
+div.container-view div.view .call-container-put table tr th {
+  background-color: rgba(151, 189, 228, 0.3);
+}
+div.container-view div.view .call-container-delete .panel-default, div.container-view div.view .call-container-delete .panel-default .panel-heading, div.container-view div.view .call-container-delete table tr td, div.container-view div.view .call-container-delete table tr th {
+  border-color: #F37C7C;
+}
+div.container-view div.view .call-container-delete .panel-default .panel-heading {
+  background-color: #F37C7C;
+}
+div.container-view div.view .call-container-delete table tr th {
+  background-color: rgba(243, 124, 124, 0.3);
+}
+
+pre {
+  background: #272822;
+}

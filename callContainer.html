@@ -1,0 +1,51 @@
+<div class="call-container call-container-{{call.method | lowercase }}">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">{{ call.title }}</h3>
+		</div>
+		<div class="panel-body">
+			<span class="panel-body-title">Description : </span><span class="panel-body-content">{{call.description }}</span><br />
+			<span class="panel-body-title">Status : </span><span class="panel-body-status status-{{call.status }}"></span><br />
+			<span class="panel-body-title">Comment : </span><span class="panel-body-content">{{call.comment }}</span><br />
+		</div>
+	</div>
+	<table class="table table-bordered table-condensed">
+		<thead>
+			<tr>
+				<th class="text-center td-method">Method</th>
+				<th class="text-center td-url">Url</th>
+				<th class="text-center td-address">Address</th>
+				<th class="text-center td-params">Params</th>
+				<th class="text-center td-return">Return</th>
+				<th class="text-center td-example">example</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="td-method"> <span class="label-method label-{{ call.method | lowercase }}">{{ call.method }}</span></td>
+				<td class=" td-url">{{ call.url }}</td>
+				<td  class="td-address">{{ call.address }}</td>
+				<td class="td-params">
+					<ul ng-if="simpleParams">
+						<li ng-repeat="param in call.params"> - {{ param }}</li>
+					</ul>
+					<ul ng-if="!simpleParams" ng-repeat="(key, paramList) in call.params">
+						<li ng-repeat="(key, params) in paramList" class="list-sub-title">
+							{{ key }} : <br />
+							<ul class="sub-list">
+								<li ng-repeat="param in params"> - {{ param }}</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+				<td class="td-return">{{ call.return }}</td>
+				<td class="td-example">
+					<a ng-if="call.method === 'GET'" href="{{ url }}{{ call.example }}" target="_blank" title="{{ call.title}}">{{ call.example }}</a>
+					<a ng-if="call.method !== 'GET'" href="javascript:void(0);"title="{{ call.title}}">{{ call.example }}</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr />
+</div>
+

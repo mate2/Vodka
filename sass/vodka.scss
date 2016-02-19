@@ -1,0 +1,247 @@
+$get : #8DCEA8;
+$post : #FCB34B;
+$put : #97BDE4;
+$delete : #F37C7C;
+
+body{
+  font-family: 'Inconsolata', 'Verdana', 'sans-serif';
+}
+
+nav.navbar {
+  background-color: $put;
+}
+nav.navbar-default {
+  a.navbar-brand {
+    font-weight: bold;
+    color: white;
+    font-size: 42px;
+    cursor: pointer;
+  }
+  a.navbar-brand:hover{
+    color:white;
+  }
+}
+
+h1.sub-title{
+  margin-top: -12px;
+  font-size: 20px;
+  padding-left: 5px;
+  font-style: italic;
+}
+
+div.container-view{
+  margin-top:40px;
+
+  div.menu{
+    border: solid 1px $put;
+    background-color: #eee;
+    padding: 15px 0 15px 0;
+    border-radius: 15px 0px 0px 15px;
+
+    ul{
+      margin:0;
+      padding:0;
+      li{
+        list-style: none;
+        text-transform: capitalize;
+        cursor:pointer;
+        padding-left:15px;
+        font-size: 16px;
+      }
+      li:hover, li.selected{
+        background-color: white;
+      }
+      li.selected{
+        font-weight: bold;
+        color:white;
+        background-color:$put;
+      }
+    }
+  }
+
+  div.view{
+    padding-left:40px;
+
+    h2{
+      margin-top: 0;
+    }
+
+    .call-container{
+      margin: 40px 0 60px 0;
+
+      hr{
+        border-top: #ccc solid 1px;
+      }
+
+      .panel-default {
+        .panel-heading h3.panel-title {
+          text-transform: uppercase;
+          font-weight: bold;
+          color: white;
+          font-size: 20px;
+          text-shadow: 1px 1px #aaa;
+        }
+
+        span.panel-body-title{
+          font-size: 14px;
+          font-style: italic;
+          color: #777;
+        }
+
+        span.panel-body-content{
+          padding-left : 5px;
+        }
+
+        span.panel-body-status{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+        }
+        span.status-green{
+          background-color:green;
+        }
+        span.status-orange{
+          background-color:orange;
+        }
+        span.status-red{
+          background-color:red;
+        }
+      }
+
+      table{
+        tr{
+          td, th{
+            vertical-align: middle;
+            border:solid 1px #ccc;
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+          th{
+            background-color: #f5f5f5;
+          }
+
+          .td-method{
+            min-width:75px;
+            text-align: center;
+
+            .label-method{
+              width:65px;
+              height:18px;
+              border-radius:15px;
+              font-weight:bold;
+              text-align:center;
+              display:block;
+              line-height:18px;
+              color:white;
+              margin: auto;
+            }
+            .label-get{
+              background-color:$get;
+            }
+            .label-post{
+              background-color:$post;
+            }
+            .label-put{
+              background-color:$put;
+            }
+
+            .label-delete{
+              background-color:$delete;
+            }
+          }
+
+          .td-url{
+            text-align: center;
+            min-width: 75px;
+          }
+
+          .td-address{
+            max-width:15%;
+          }
+
+          .td-params{
+            max-width: 25%;
+
+            ul{
+              margin:0;
+              padding:0 5px;
+
+              li{
+                list-style:none;
+              }
+              li.list-sub-title{
+                font-weight: bold;
+                text-transform: capitalize;
+                margin-bottom:20px;
+
+                ul.sub-list{
+                  margin-top:5px;
+                  margin-bottom: 10px;
+
+                  li{
+                    font-weight: normal;
+                    text-transform: none;
+                  }
+                }
+              }
+            }
+          }
+
+          .td-return, .td-example{
+            width:25%;
+          }
+        }
+      }
+    }
+
+    .call-container-get{
+      .panel-default, .panel-default .panel-heading, table tr td, table tr  th {
+        border-color:$get;
+      }
+      .panel-default .panel-heading{
+        background-color: $get;
+      }
+      table tr  th {
+        background-color: rgba(141, 206, 168, 0.3);
+      }
+    }
+    .call-container-post{
+      .panel-default, .panel-default .panel-heading, table tr td, table tr  th {
+        border-color:$post;
+      }
+      .panel-default .panel-heading{
+        background-color: $post;
+      }
+      table tr  th {
+        background-color: rgba(252, 179, 75, 0.3);
+      }
+    }
+    .call-container-put{
+      .panel-default, .panel-default .panel-heading, table tr td, table tr  th {
+        border-color: $put;
+      }
+      .panel-default .panel-heading{
+        background-color: $put;
+      }
+      table tr  th {
+        background-color: rgba(151, 189, 228, 0.3);
+      }
+    }
+    .call-container-delete{
+      .panel-default, .panel-default .panel-heading, table tr td, table tr  th {
+        border-color: $delete;
+      }
+      .panel-default .panel-heading{
+        background-color: $delete;
+      }
+      table tr  th {
+        background-color: rgba(243, 124, 124, 0.3);
+      }
+    }
+  }
+}
+
+pre{
+  background: #272822;
+}

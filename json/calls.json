@@ -1,0 +1,103 @@
+{
+	"category1" : {
+		"title" : "Category 1",
+		"calls" : [
+			{
+				"title" : "Get all call 1",
+				"description" : "description call 1",
+				"method" : "GET",
+				"url" : "{{url}}",
+				"address" : "/category1/",
+				"params" : [
+				  	"token"
+				],
+				"return" : "return list of category1",
+				"example" : "/category1/?token=123",
+				"status" : "green",
+				"comment" : "online"
+			},
+			{
+				"title" : "Get call 1-2 X",
+				"description" : "description call 1-2",
+				"method" : "GET",
+				"url" : "{{url}}",
+				"address" : "/category1/[X]/",
+				"params" : [
+				  	"[x] = id",
+				  	"token"
+				],
+				"return" : "return object X of category1",
+				"example" : "/category1/42/?token=123",
+				"status" : "green",
+				"comment" : "online"
+			}
+		]
+	},
+	"category2" :{
+		"title" : "Category 2",
+		"calls" : [
+			{
+				"title" : "call 2",
+				"description" : "description call 2",
+				"method" : "POST",
+				"url" : "{{url}}",
+				"address" : "/category2/",
+				"params" : [
+					{
+						"title of params 1" : [
+							"param1",
+							"param2"
+						]
+					},
+					{
+						"title of params 2" : [
+							"param 3",
+						  	"param 4"
+						]
+					}
+				],
+				"return" : "return post object",
+				"example" : "/category2/?param1=param1&param2=param2",
+				"status" : "orange",
+				"comment" : "doesn't return good objet, please fix it"
+			},
+			{
+				"title" : "call 2-2",
+				"description" : "description call 2-2",
+				"method" : "PUT",
+				"url" : "{{url}}",
+				"address" : "/category2/[X]",
+				"params" : [
+					"[X] = id",
+					"token",
+					"param1"
+				],
+				"return" : "return put object",
+				"example" : "/category2/42/?param1=param1-modified",
+				"status" : "green",
+				"comment" : "online"
+			}
+		]
+	},
+	"category3" : {
+		"title" : "Category 3",
+		"calls" : [
+			{
+				"title" : "delete call 3",
+				"description" : "description call 3",
+				"method" : "DELETE",
+				"url" : "{{url}}",
+				"address" : "/category3/[X]",
+				"params" : [
+				 	 "[x] = id",
+				 	 "token"
+				],
+				"return" : "return success or fail message",
+				"example" : "/category3/42?token=123",
+				"status" : "red",
+				"comment" : "to do"
+			}
+		]
+	}
+}
+
