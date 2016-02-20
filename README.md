@@ -170,4 +170,6 @@ Separate categories title from the json calls file is just in order to be able t
 * Create a function for the link on the example call to be able to manage POST/PUT/DELETE  http links too
 * Create an admin page to edit the json files directly in the webapp
 * Write some scripts to generate json files from a dump of database structure (mongo, ...)
+* Add some unit tests for call.json
+* Add examples of json returned by each calls
 * Any other great idea of improvement !
