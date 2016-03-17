@@ -30,10 +30,10 @@
 						<li ng-repeat="param in call.params"> - {{ param }}</li>
 					</ul>
 					<ul ng-if="!simpleParams" ng-repeat="(key, paramList) in call.params">
-						<li ng-repeat="(key, params) in paramList" class="list-sub-title">
+						<li class="list-sub-title">
 							{{ key }} : <br />
 							<ul class="sub-list">
-								<li ng-repeat="param in params"> - {{ param }}</li>
+								<li ng-repeat="param in paramList"> - {{ param }}</li>
 							</ul>
 						</li>
 					</ul>

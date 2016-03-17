@@ -42,20 +42,16 @@
 				"method" : "POST",
 				"url" : "{{url}}",
 				"address" : "/category2/",
-				"params" : [
-					{
-						"title of params 1" : [
-							"param1",
-							"param2"
-						]
-					},
-					{
-						"title of params 2" : [
-							"param 3",
-						  	"param 4"
-						]
-					}
-				],
+				"params" : {
+					"title of params 1" : [
+						"param1",
+						"param2"
+					],
+					"title of params 2" : [
+						"param 3",
+					  	"param 4"
+					]
+				},
 				"return" : "return post object",
 				"example" : "/category2/?param1=param1&param2=param2",
 				"status" : "orange",

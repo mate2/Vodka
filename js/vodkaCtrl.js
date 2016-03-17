@@ -31,7 +31,7 @@ vodkaApp.controller('vodkaCtrl', function ($scope, $http) {
 		scope.simpleParams = true;
 		scope.url = "https://api.mysite.com";
 
-		if( typeof( scope.call.params[0] ) === 'object' ){
+		if( typeof( scope.call.params ) === 'object' ){
 			// list of list
 			scope.simpleParams = false;
 		}
